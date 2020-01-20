@@ -19,6 +19,7 @@ urlpatterns = [
     path('test/', views.test_page, name= 'test'),
     path('test/result', views.result, name= 'result'),
     path('profile/', views.profile, name='profile'),
+    path('profileEdit/', views.profileEdit, name='profileEdit'),
 ]
 
 if settings.DEBUG:
