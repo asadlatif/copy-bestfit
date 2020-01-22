@@ -40,7 +40,7 @@ class SecretPage(LoginRequiredMixin, TemplateView):
 
 
 def test_page(request):
-    questions= Test.objects.all()
+    questions = Test.objects.all()
     return render(request,'General_knowledge.html', {"Test": questions})
 
 

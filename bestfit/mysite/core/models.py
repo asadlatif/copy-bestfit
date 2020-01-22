@@ -18,10 +18,10 @@ class Test(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
-    first_name = models.CharField(max_length=100, blank=True)
-    last_name = models.CharField(max_length=100, blank=True)
-    bio = models.TextField(max_length=500, blank=True)
-    location = models.CharField(max_length=30, blank=True)
+    first_name = models.CharField(max_length=100, blank=True, null=True)
+    last_name = models.CharField(max_length=100, blank=True, null=True)
+    bio = models.TextField(max_length=500, blank=True, null=True)
+    location = models.CharField(max_length=30, blank=True, null=True)
     birth_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
